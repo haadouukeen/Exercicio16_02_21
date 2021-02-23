@@ -3,12 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.exercicio_03;
+package com.mycompany.exercicio_04;
 
 import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
 
 /**
  *
@@ -24,16 +27,14 @@ public class Main {
         BufferedReader reader = new BufferedReader( 
             new InputStreamReader(System.in)); 
         
-        System.out.println("Digite um caminho:");
+        System.out.println("Digite um caminho de um arquivo .txt:");
         String name = reader.readLine();
         
-        if(!name.isEmpty()){
-            File folder = new File(name);
-            File[] listOfFiles = folder.listFiles();
-
-            for (int i = 0; i < listOfFiles.length; i++) {
-                System.out.println(listOfFiles[i].getName());
-              }
+        List<String> files = Files.readAllLines(Paths.get(name));
+        
+        for(String l : files){
+            System.out.println(l);
         }
     }
+    
 }
