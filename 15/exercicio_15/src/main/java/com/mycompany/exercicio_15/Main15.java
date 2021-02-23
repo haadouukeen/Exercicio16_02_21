@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.exercicio_10;
+package com.mycompany.exercicio_15;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,7 +13,7 @@ import java.io.InputStreamReader;
  *
  * @author Igor
  */
-public class Main10 {
+public class Main15 {
 
     /**
      * @param args the command line arguments
@@ -23,22 +23,14 @@ public class Main10 {
         BufferedReader reader = new BufferedReader( 
             new InputStreamReader(System.in)); 
         
-        System.out.println("Digite um numero:");
-        String num1 = reader.readLine();
+        System.out.println("Digite qualquer coisa:");
+        String valor = reader.readLine();
         
-        if(!num1.isEmpty()){
-            int n1 = Integer.parseInt(num1);
+        if(!valor.isEmpty()){
+            valor = valor.replaceAll("\\D+","");
             
-            n1 = fatorial(n1);
-            
-            System.out.println("Fatorial: "+n1);
+            System.out.println("Filtrado apenas os numeros da string: "+valor);
         }
     }
     
-    public static int fatorial(int num){
-        if(num == 0)
-            return 1;
-        
-        return num*fatorial(num-1);
-    }
 }
