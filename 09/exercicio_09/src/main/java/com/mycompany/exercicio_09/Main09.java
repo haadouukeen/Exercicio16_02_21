@@ -37,10 +37,10 @@ public class Main09 {
             int n2 = Integer.parseInt(num2);
             ArrayList<Integer> numeros = new ArrayList<>();
             
-            n1--;
+            n1++;
             while(n1 != n2){
                 numeros.add(n1);
-                n1--;
+                n1++;
             }
             
             for(Integer ii : numeros){

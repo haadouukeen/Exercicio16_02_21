@@ -32,10 +32,17 @@ public class Main07 {
         if(num1.isEmpty() || num2.isEmpty()){
             
         }else{
+            int n1 = Integer.parseInt(num1);
+            int n2 = Integer.parseInt(num2);
             
-            int resu = Integer.parseInt(num1) - Integer.parseInt(num2);
+            for(int i = n1+1;i < n2;i++){
+                System.out.println(i);
+            }
+            
+            
+            //int resu = Integer.parseInt(num1) - Integer.parseInt(num2);
 
-            System.out.println("Intervalo entre os numeros: "+resu);
+            //System.out.println("Intervalo entre os numeros: "+resu);
         }
         
     }

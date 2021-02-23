@@ -40,9 +40,8 @@ public class Main {
             int i = 0;
 
             for(String l : files){
-                if(l.equals(pala)){
-                    i++;
-                }
+                
+                
             }
 
             System.out.println("Palavra "+pala+" foi citada "+i+" vezes");
