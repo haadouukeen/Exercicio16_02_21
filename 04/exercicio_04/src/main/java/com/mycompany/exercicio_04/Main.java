@@ -30,11 +30,15 @@ public class Main {
         System.out.println("Digite um caminho de um arquivo .txt:");
         String name = reader.readLine();
         
-        List<String> files = Files.readAllLines(Paths.get(name));
-        
-        for(String l : files){
-            System.out.println(l);
+        if(!name.isEmpty()){
+            
+            List<String> files = Files.readAllLines(Paths.get(name));
+
+            for(String l : files){
+                System.out.println(l);
+            }
         }
+        
     }
     
 }

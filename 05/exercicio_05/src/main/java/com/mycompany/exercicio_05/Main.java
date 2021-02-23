@@ -32,16 +32,22 @@ public class Main {
         System.out.println("Digite uma palavra:");
         String pala = reader.readLine();
         
-        List<String> files = Files.readAllLines(Paths.get(name));
-        int i = 0;
-        
-        for(String l : files){
-            if(l.equals(pala)){
-                i++;
+        if(name.isEmpty() || pala.isEmpty()){
+            
+        }else{
+            
+            List<String> files = Files.readAllLines(Paths.get(name));
+            int i = 0;
+
+            for(String l : files){
+                if(l.equals(pala)){
+                    i++;
+                }
             }
+
+            System.out.println("Palavra "+pala+" foi citada "+i+" vezes");
         }
         
-        System.out.println("Palavra "+pala+" foi citada "+i+" vezes");
     }
     
 }

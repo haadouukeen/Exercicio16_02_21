@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.exercicio_06;
+package com.mycompany.exercicio_07;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,29 +13,31 @@ import java.io.InputStreamReader;
  *
  * @author Igor
  */
-public class Main06 {
+public class Main07 {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args)throws IOException {
+    public static void main(String[] args) throws IOException{
         // TODO code application logic here
         BufferedReader reader = new BufferedReader( 
             new InputStreamReader(System.in)); 
         
-        System.out.println("Digite uma palavra:");
-        String palavra = reader.readLine();
-        String resu = "";
+        System.out.println("Digite um numero:");
+        String num1 = reader.readLine();
         
-        if(!palavra.isEmpty()){
-            char[] letras = palavra.toCharArray();
+        System.out.println("Digite outro numero:");
+        String num2 = reader.readLine();
+        
+        if(num1.isEmpty() || num2.isEmpty()){
             
-            for(int i = palavra.length()-1;i > -1;i--){
-                resu += letras[i];
-            }
+        }else{
             
-            System.out.println("Resultado: "+resu);
+            int resu = Integer.parseInt(num1) - Integer.parseInt(num2);
+
+            System.out.println("Intervalo entre os numeros: "+resu);
         }
+        
     }
     
 }
