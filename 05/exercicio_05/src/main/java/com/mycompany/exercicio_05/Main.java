@@ -40,8 +40,15 @@ public class Main {
             int i = 0;
 
             for(String l : files){
+                l = l.replaceAll("(?i)[^0-9a-záéíóúàèìòùâêîôûãõç\\s]", "");
                 
+                String[] palavras = l.split(" ");
                 
+                for(String p: palavras){
+                    if(p.toUpperCase().equals(pala.toUpperCase())){
+                        i++;
+                    }
+                }
             }
 
             System.out.println("Palavra "+pala+" foi citada "+i+" vezes");
